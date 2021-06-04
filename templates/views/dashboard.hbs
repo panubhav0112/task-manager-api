@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="./image/homework.png" alt="image">
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About Us</a></li>
+            <li><a href="/">Contact Us</a></li>
+            <li><a href="/">Help</a></li>
+            <li>
+                <div class="dropdown">
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><i class="fa fa-power-off"></i></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a id="loggingout">Logout</a>
+  </div>
+</div>
+</div>
+            </li>
+        </ul>
+    </nav>
+    <div id="taskadder">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true" class="cross_button">&times;</span>
+        </button>
+        <h2 class="adding_task">Add Task</h2>
+        <form class="addingtask">  
+            <input type="text" id="addtask">
+            <br>
+            <label>Completed
+            <input type="checkbox" id="accept">
+            <br>
+            <button id="taskAdd" type="submit">Add</button>
+        </form>
+    </div>
+    <h1 id="username_wel"></h1>
+    <div class="container">
+        <button class="my_add">
+            <div class="rot1"></div>
+            <div class="rot2"></div>
+        </button>
+        <div class="data_content">
+            <h3 id="message-1"></h3>
+            <h3 id="message-2"></h3>
+        </div>
+    <div class="pagination">
+            <button id="prev-btn" type="click">prev</button>
+            <button id="next-btn" type="click">next</button>
+    </div>
+    </div>
+    <script src="./JavaScript/app-dashboard.js"></script>
+</body>
+</html>

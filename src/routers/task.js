@@ -37,29 +37,31 @@ router.get('/tasks', auth, async (req, res)=>{
                 sort
             }
         }).execPopulate()
+        req.user.tasks.splice(0, 0, {"username":req.user.name});
+
         res.send(req.user.tasks)
     }catch(e){
         res.status(400).send(e)
     }
 })
 
-router.get('/tasks/:id', auth, async (req, res)=>{
-    const _id = req.params.id
+// router.get('/tasks/:id', auth, async (req, res)=>{
+//     const _id = req.params.id
 
-    try{
-        const task = await Task.findOne({ _id, owner: req.user._id})
-        if(!task){
-            res.status(404).send()
-        }
-        else{
-            res.send(task)
-        }
-    }catch(e){
-        res.status(400).send(e)
-    }
-})
+//     try{
+//         const task = await Task.findOne({ _id, owner: req.user._id})
+//         if(!task){
+//             res.status(404).send()
+//         }
+//         else{
+//             res.send(task)
+//         }
+//     }catch(e){
+//         res.status(400).send(e)
+//     }
+// })
 
-router.patch('/tasks/:id', auth, async (req, res)=>{
+router.post('/tasks/:id', auth, async (req, res)=>{
     const updates = Object.keys(req.body)
     const allowedUpdates = ['description', 'completed']
     const isValidUpdate = updates.every((update)=> allowedUpdates.includes(update))
@@ -80,7 +82,7 @@ router.patch('/tasks/:id', auth, async (req, res)=>{
     }
 })
 
-router.delete('/tasks/:id', auth, async (req, res)=>{
+router.get('/tasks/:id', auth, async (req, res)=>{
     try{
         const task = await Task.findOneAndDelete({ _id:req.params.id, owner: req.user._id})
         if(!task){

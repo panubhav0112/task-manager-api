@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+#navbar{
+    
+    background: url('../image/navbar-bg.jpg');
+    padding: 10px 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#navbar ul{    
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    margin-left: 1000px;
+}
+#navbar li{
+    list-style: none;
+}
+#navbar li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 6px 25px;
+    color: azure;
+}
+#navbar li a:hover{
+    font-weight: bold;
+}
+#logo{
+    display: flex;
+    margin: 0 14px;
+    align-items: center;
+    margin-right: 45px;
+}
+#logo img{
+    height: 43px;
+}
+.dropbtn {
+    background: none;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+  
+h1{
+    text-align: center;
+    margin: 40px;
+}
+.container{
+    border: 2px solid black;
+    margin: 30px;
+    padding: 20px;
+    height: 850px;
+    width: 75%;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: linear-gradient(90deg, rgba(2,0,36,0.4) 0%, rgba(9,9,121,0.4) 35%, rgba(0,212,255,0.4) 100%);
+    /* background-color: rgb(233, 236, 240); */
+    box-shadow: 8px 8px 15px rgb(0, 0, 0);
+}
+.taskadder{
+    height: 320px;
+    width: 546px;
+    border: 2px solid violet;
+    position: absolute;
+    margin-left: 710px;
+    margin-top: 140px;
+}
+#user-task{
+    border-radius: 12px;
+    border-style: none;
+    outline: none;
+    padding: 4px;
+    font-size: 15px;
+    box-shadow: -3px -3px 5px black inset;
+}
+.tasks{
+    margin: 10px;
+    margin-top: 20px;
+}
+.status-completion{
+    margin: 15px;
+    margin-bottom: 23px;
+    display: flex;
+    flex-direction: row;
+}
+.data_cont{
+    background: linear-gradient(90deg, rgba(152, 235, 252, 0.247) 0%, rgba(122, 122, 199, 0.267) 35%, rgba(142, 88, 194, 0.185)100%);
+    border: 2px solid white;
+    box-shadow: 3px 3px 10px white;
+    height: 200px;
+    margin: 30px;
+    margin-top: 40px;
+    border-bottom-left-radius: 30px;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.marks{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    margin-left: 810px;
+    position: absolute;
+    background: none;
+    border: none;
+}
+.btn:hover{
+    cursor: pointer;
+    color: rgb(206, 31, 31);
+}
+.submit31{
+    background-color: rgb(247, 54, 47);
+    margin-left: 200px;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    border: none;
+    transition: all 0.2s;
+}
+.submit31:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    color: rgb(116, 16, 16);
+    font-weight: bold;
+}
+.submit32{
+    margin-left: 80px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(4, 194, 4);
+    color: white;
+    border: none;
+    transition: all 0.2s;
+}
+.submit32:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    color: rgb(16, 80, 8);
+    font-weight: bold;
+}
+.CreatedTime{
+    color: rgb(234, 237, 241);
+}
+#taskadder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../image/navbar-bg.jpg);
+    position: absolute;
+    z-index: +1;
+    border-radius: 20px;
+    color: white;
+    display: none;
+    margin-left: 794px;
+    margin-top: 133px;
+    height: 275px;
+}
+.adding_task{
+    margin: 15px;
+    margin-top: -30px;
+}
+.bullets{
+    color: rgb(122, 36, 148);
+    text-shadow: 1px 1px black;
+}
+.addingtask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1.5px solid white;
+    width: 75%;
+    height: 70%;
+    border-radius: 22px;
+}
+#taskAdd{
+    /* position: absolute; */
+    margin: 20px;
+    margin-top: 26px;
+    margin-bottom: 50px;
+    width: 80px;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    font-size: 1.1rem;
+    background-color: rgb(255, 255, 255);
+}
+#taskAdd:hover{
+    cursor: pointer;
+    background-color: rgb(73, 53, 187);
+    color: white;
+    border: 1.5px solid white;
+}
+#addtask{
+    height: 30px;
+    width: 85%;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 0 5px rgb(92, 190, 255);
+        box-shadow: inset 0 0 5px rgb(92, 190, 255);
+    padding: 5px;
+    margin-bottom: 26px;
+}
+label{
+    font-size: 1.1rem;
+}
+.close{
+    /* position: absolute; */
+    background: none;
+    border: none;
+    color: rgb(219, 219, 219);
+    margin-top: 10px;
+    margin-left: 470px;
+    font-size: 1.9rem;
+}
+.close:hover{
+    cursor: pointer;
+    color: white;
+}
+.my_add{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    margin-left: 67%;
+    margin-top: 15px;
+    background: linear-gradient(90deg,  rgba(9,9,121,0.4) 35%, rgba(143, 88, 194, 0.37)100%);
+    outline: none;
+    border: none;
+    box-shadow: 3px 3px 5px rgb(94, 93, 93);
+    transition: all 0.3s;
+}
+.my_add:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.rot1{
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    margin-top: -7px;
+    margin-left: 5.5px;
+    background-color: white;
+}
+.rot2{
+    width: 20px;
+    height: 5px;
+    margin-left: -2px;
+    background-color: white;
+}
+.cross_button{
+    padding-right: 17px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 46px;
+}
+#prev-btn{
+    width: 80px;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    background: linear-gradient(90deg,rgba(125, 67, 179, 0.555)0%, rgba(0, 0, 255, 0.555) 45%, rgba(152, 235, 252, 0.568) 110%);
+    box-shadow: 3px 3px 3px rgb(78, 78, 78);
+}
+#prev-btn:hover{
+    cursor: pointer;
+    color: white;
+}
+#next-btn{
+    width: 80px;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    background: linear-gradient(90deg, rgba(152, 235, 252, 0.568) 0%, rgba(0, 0, 255, 0.555) 25%, rgba(125, 67, 179, 0.555)100%);
+    box-shadow: 3px 3px 3px rgb(78, 78, 78);
+}
+#next-btn:hover{
+    cursor: pointer;
+    color: white;
+}
