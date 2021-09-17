@@ -70,9 +70,9 @@ function gettasks(i){
                                                                   <button class="submit32" id="${'2' + id}" onclick=update(id)>Mark as Completed</button>
                                                                  
                                                                   </div> <br>
-          <div class="CreatedTime">Created At : ${task.createdAt}</div> 
+          <div class="CreatedTime">Created At : ${task.createdAt.substring(0,10)}</div> 
           <br>
-          Updated At : ${task.updatedAt}
+          Updated At : ${task.updatedAt.substring(0,10)}
           </div>`
         }).join('')
         }
